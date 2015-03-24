@@ -103,8 +103,8 @@ Android jars for the codec, source, and javadoc can be found in
 
     target/dist
 
-C++ Build
----------
+C++ Build using ant
+-------------------
 
 NOTE: Linux, Mac OS, and Windows only for the moment. See [FAQ](https://github.com/real-logic/simple-binary-encoding/wiki/Frequently-Asked-Questions).
 Windows builds have been tested with Visual Studio Express 12.
@@ -120,6 +120,23 @@ If you have doxygen installed:
 Run the C++98 examples
 
     $ ant examples:cpp
+
+C++ Build using CMake
+---------------------
+
+NOTE: Linux, Mac OS, and Windows only for the moment. See [FAQ](https://github.com/real-logic/simple-binary-encoding/wiki/Frequently-Asked-Questions).
+Windows builds have been tested with Visual Studio Express 12.
+
+First build using gradle to generate the SBE jar.
+
+    $ ./gradlew
+
+Then build and test with CMake in the build subdirectory created by the gradle build.
+
+    $ cd build
+    $ cmake ..
+    $ cmake --build .
+    $ ctest
 
 C# Build
 --------
